@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c24c8878-1661-47fb-ba16-dcf6e52df3a2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/contentModel.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/indexLayout.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/.idea.Project_MGP/riderModule.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Vehicle.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Vehicle.cs.meta" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/contentModel.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,22 +17,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Agent.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Agent.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+            <state relative-caret-position="759">
+              <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
               <folding>
-                <marker date="1542816500150" expanded="false" signature="6:78" ph="..." />
-                <marker date="1542816500150" expanded="true" signature="115:1817" ph="{...}" />
-                <marker date="1542816500150" expanded="true" signature="206:213" ph="{...}" />
-                <marker date="1542816500150" expanded="true" signature="268:894" ph="{...}" />
-                <marker date="1542816500150" expanded="true" signature="393:561" ph="{...}" />
-                <marker date="1542816500150" expanded="true" signature="532:557" ph="{...}" />
-                <marker date="1542816500150" expanded="true" signature="568:748" ph="{...}" />
-                <marker date="1542816500150" expanded="true" signature="712:744" ph="{...}" />
-                <marker date="1542816500150" expanded="true" signature="916:1590" ph="{...}" />
-                <marker date="1542816500150" expanded="true" signature="1669:1815" ph="{...}" />
+                <marker date="1542821730130" expanded="false" signature="6:78" ph="..." />
+                <marker date="1542821730130" expanded="true" signature="115:1797" ph="{...}" />
+                <marker date="1542821730130" expanded="true" signature="206:213" ph="{...}" />
+                <marker date="1542821730130" expanded="true" signature="268:874" ph="{...}" />
+                <marker date="1542821730130" expanded="true" signature="393:561" ph="{...}" />
+                <marker date="1542821730130" expanded="true" signature="532:557" ph="{...}" />
+                <marker date="1542821730130" expanded="true" signature="568:748" ph="{...}" />
+                <marker date="1542821730130" expanded="true" signature="712:744" ph="{...}" />
+                <marker date="1542821730130" expanded="true" signature="896:1570" ph="{...}" />
+                <marker date="1542821730130" expanded="true" signature="1649:1795" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Teleport.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Zones/Teleport.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+              <folding>
+                <marker date="1542822203473" expanded="false" signature="6:78" ph="..." />
+                <marker date="1542822203473" expanded="true" signature="117:378" ph="{...}" />
+                <marker date="1542822203473" expanded="true" signature="195:202" ph="{...}" />
+                <marker date="1542822203473" expanded="true" signature="257:261" ph="{...}" />
+                <marker date="1542822203473" expanded="true" signature="307:376" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -62,6 +76,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Vehicle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Zones/Teleport.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/73F4CCE3-51A9-454B-85BA-2899CA601133/12/d0fea912/MonoBehaviour.cs" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
@@ -69,6 +84,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Vehicle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Zones/Teleport.cs" />
       </list>
     </option>
   </component>
@@ -151,12 +167,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1542812055662</updated>
-      <workItem from="1542812059371" duration="4480000" />
+      <workItem from="1542812059371" duration="7601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4480000" />
+    <option name="totallyTimeSpent" value="7601000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -405,19 +421,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state relative-caret-position="759">
+          <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           <folding>
-            <marker date="1542816500150" expanded="false" signature="6:78" ph="..." />
-            <marker date="1542816500150" expanded="true" signature="115:1817" ph="{...}" />
-            <marker date="1542816500150" expanded="true" signature="206:213" ph="{...}" />
-            <marker date="1542816500150" expanded="true" signature="268:894" ph="{...}" />
-            <marker date="1542816500150" expanded="true" signature="393:561" ph="{...}" />
-            <marker date="1542816500150" expanded="true" signature="532:557" ph="{...}" />
-            <marker date="1542816500150" expanded="true" signature="568:748" ph="{...}" />
-            <marker date="1542816500150" expanded="true" signature="712:744" ph="{...}" />
-            <marker date="1542816500150" expanded="true" signature="916:1590" ph="{...}" />
-            <marker date="1542816500150" expanded="true" signature="1669:1815" ph="{...}" />
+            <marker date="1542821730130" expanded="false" signature="6:78" ph="..." />
+            <marker date="1542821730130" expanded="true" signature="115:1797" ph="{...}" />
+            <marker date="1542821730130" expanded="true" signature="206:213" ph="{...}" />
+            <marker date="1542821730130" expanded="true" signature="268:874" ph="{...}" />
+            <marker date="1542821730130" expanded="true" signature="393:561" ph="{...}" />
+            <marker date="1542821730130" expanded="true" signature="532:557" ph="{...}" />
+            <marker date="1542821730130" expanded="true" signature="568:748" ph="{...}" />
+            <marker date="1542821730130" expanded="true" signature="712:744" ph="{...}" />
+            <marker date="1542821730130" expanded="true" signature="896:1570" ph="{...}" />
+            <marker date="1542821730130" expanded="true" signature="1649:1795" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Zones/Teleport.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <marker date="1542822203473" expanded="false" signature="6:78" ph="..." />
+            <marker date="1542822203473" expanded="true" signature="117:378" ph="{...}" />
+            <marker date="1542822203473" expanded="true" signature="195:202" ph="{...}" />
+            <marker date="1542822203473" expanded="true" signature="257:261" ph="{...}" />
+            <marker date="1542822203473" expanded="true" signature="307:376" ph="{...}" />
           </folding>
         </state>
       </provider>

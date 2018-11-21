@@ -32,7 +32,6 @@ public class Agent : MonoBehaviour {
 				Speed = MaxSpeed;
 			}
 		}
-		Debug.Log(Speed);
 		gameObject.transform.position = gameObject.transform.position + gameObject.transform.forward * (Time.deltaTime * Speed);
 	}
 

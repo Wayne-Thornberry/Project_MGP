@@ -18,6 +18,9 @@
             <e p="Agent.cs" t="Include" />
             <e p="Vehicle.cs" t="Include" />
           </e>
+          <e p="Zones" t="Include">
+            <e p="Teleport.cs" t="Include" />
+          </e>
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

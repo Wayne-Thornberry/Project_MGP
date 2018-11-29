@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c24c8878-1661-47fb-ba16-dcf6e52df3a2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/contentModel.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Project_MGP/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/Levels/BasicMap.unity" afterPath="$PROJECT_DIR$/Assets/Levels/BasicMap.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/m_e_s_road.fbx" afterPath="$PROJECT_DIR$/Assets/Models/m_e_s_road.fbx" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/m_e_s_road.fbx.meta" afterPath="$PROJECT_DIR$/Assets/Models/m_e_s_road.fbx.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/m_e_s_road_3_intersection.fbx" afterPath="$PROJECT_DIR$/Assets/Models/m_e_s_road_3_intersection.fbx" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/m_e_s_road_3_intersection.fbx.meta" afterPath="$PROJECT_DIR$/Assets/Models/m_e_s_road_3_intersection.fbx.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab" afterPath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab.meta" afterPath="$PROJECT_DIR$/Assets/Prefabs/Car.prefab.meta" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TeleportZone.prefab" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TeleportZone.prefab.meta" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" />
-      <change beforePath="$PROJECT_DIR$/UnityPackageManager/manifest.json" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,7 +16,7 @@
       <file leaf-file-name="Agent.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-227">
+            <state relative-caret-position="17">
               <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
               <folding>
                 <marker date="1543015337761" expanded="false" signature="6:78" ph="..." />
@@ -101,7 +87,6 @@
             <state relative-caret-position="51">
               <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
               <folding>
-                <marker date="1542815747605" expanded="true" signature="12:70" ph="{...}" />
                 <marker date="1542815747605" expanded="true" signature="47:68" ph="{...}" />
               </folding>
             </state>
@@ -160,13 +145,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="Project_MGP (2 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Loading solution..." type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -174,6 +158,7 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -210,11 +195,12 @@
       <workItem from="1542812059371" duration="8205000" />
       <workItem from="1543001223916" duration="2889000" />
       <workItem from="1543010311148" duration="5624000" />
+      <workItem from="1543082832016" duration="4000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16718000" />
+    <option name="totallyTimeSpent" value="16722000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -236,7 +222,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25799572" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26066098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -262,6 +248,76 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1543015337761" expanded="false" signature="6:78" ph="..." />
+            <marker date="1543015337761" expanded="true" signature="115:2113" ph="{...}" />
+            <marker date="1543015337761" expanded="true" signature="206:213" ph="{...}" />
+            <marker date="1543015337761" expanded="true" signature="268:1129" ph="{...}" />
+            <marker date="1543015337761" expanded="true" signature="390:1126" ph="{...}" />
+            <marker date="1543015337761" expanded="true" signature="501:802" ph="{...}" />
+            <marker date="1543015337761" expanded="true" signature="659:688" ph="{...}" />
+            <marker date="1543015337761" expanded="true" signature="719:748" ph="{...}" />
+            <marker date="1543015337761" expanded="true" signature="769:797" ph="{...}" />
+            <marker date="1543015337761" expanded="true" signature="810:998" ph="{...}" />
+            <marker date="1543015337761" expanded="true" signature="958:993" ph="{...}" />
+            <marker date="1543015337761" expanded="true" signature="1151:1886" ph="{...}" />
+            <marker date="1543015337761" expanded="true" signature="1965:2111" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Zones/Teleport.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <marker date="1542822203473" expanded="false" signature="6:78" ph="..." />
+            <marker date="1542822203473" expanded="true" signature="117:378" ph="{...}" />
+            <marker date="1542822203473" expanded="true" signature="195:202" ph="{...}" />
+            <marker date="1542822203473" expanded="true" signature="257:261" ph="{...}" />
+            <marker date="1542822203473" expanded="true" signature="307:376" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Zones/Spawn.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <marker date="1543014524128" expanded="false" signature="6:78" ph="..." />
+            <marker date="1543014524128" expanded="true" signature="114:265" ph="{...}" />
+            <marker date="1543014524128" expanded="true" signature="164:263" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Zones/Destroy.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
+          <folding>
+            <marker date="1543013349479" expanded="false" signature="6:78" ph="..." />
+            <marker date="1543013349479" expanded="true" signature="117:226" ph="{...}" />
+            <marker date="1543013349479" expanded="true" signature="165:224" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/AI/Vehicle.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding>
+            <marker date="1542815747605" expanded="true" signature="47:68" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1190">
@@ -315,7 +371,6 @@
         <state relative-caret-position="51">
           <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
           <folding>
-            <marker date="1542815747605" expanded="true" signature="12:70" ph="{...}" />
             <marker date="1542815747605" expanded="true" signature="47:68" ph="{...}" />
           </folding>
         </state>
@@ -360,7 +415,6 @@
         <state relative-caret-position="51">
           <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
           <folding>
-            <marker date="1542815747605" expanded="true" signature="12:70" ph="{...}" />
             <marker date="1542815747605" expanded="true" signature="47:68" ph="{...}" />
           </folding>
         </state>
@@ -411,7 +465,6 @@
         <state relative-caret-position="51">
           <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
           <folding>
-            <marker date="1542815747605" expanded="true" signature="12:70" ph="{...}" />
             <marker date="1542815747605" expanded="true" signature="47:68" ph="{...}" />
           </folding>
         </state>
@@ -445,7 +498,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/AI/Agent.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-227">
+        <state relative-caret-position="17">
           <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
           <folding>
             <marker date="1543015337761" expanded="false" signature="6:78" ph="..." />

@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-
-public class trafficLight : MonoBehaviour 
+public class TrafficLight : MonoBehaviour
 {
-	public int State { get; private set; }
-	Collider traffic_Collider;
+	public int State;
+	public Collider Blocker;
+	
 
-	public trafficLight()
+	public bool IsRed()
 	{
-		SetState(State);
+		return State == 0;
 	}
 
 	public bool IsGreen()
@@ -19,39 +16,9 @@ public class trafficLight : MonoBehaviour
 		return State == 1;
 	}
 
-	public bool IsOrange()
-	{
-		return State == 2;
-		
-	}
-
-	public bool isRed()
-	{
-		return State == 3;
-	}
-
 	public void SetState(int state)
 	{
-		if (state == 1)
-		{
-			State = state;
-			traffic_Collider.enabled = !traffic_Collider.enabled;
-		}
-
-		else if(state == 2)
-		{
-			State = state;	
-			traffic_Collider.enabled = !traffic_Collider.enabled;
-		}
-		else if (state == 3)
-		{
-			State = state;
-			traffic_Collider.enabled = !traffic_Collider.enabled;
-		}
-		else
-		{
-			State = state;
-			traffic_Collider.enabled = !traffic_Collider.enabled;
-		}
+		State = state;
+		Blocker.enabled = State == 0;
 	}
 }

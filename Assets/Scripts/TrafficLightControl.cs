@@ -1,63 +1,46 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using  System.Timers;
 
-public class TrafficLightControl : trafficLight
+public class TrafficLightControl : MonoBehaviour
 {
-	public static trafficLight lightOne;
-	public static trafficLight lightTwo;
-	public static trafficLight lightThree;
-	public static trafficLight lightFour;
-
-
-	public static Timer countDown = new Timer(50000);
+	public TrafficLight LightOne;
+	public TrafficLight LightTwo;
+	public TrafficLight LightThree;
+	public TrafficLight LightFour;
+	public bool Flip;
+	public float Count;
 	
 	// Use this for initialization
 	void Start()
 	{
-		lightOne.SetState(1);
-		lightTwo.SetState(3);
-		lightThree.SetState(1);
-		lightFour.SetState(3);
-		
-		SetTimer();
+		LightOne.SetState(1);
+		LightTwo.SetState(0);
+		LightThree.SetState(0);
+		LightFour.SetState(1);
 	}
 
-	private static void SetTimer()
+	void Update()
 	{
-		// event handler for when the timer reaches 5 sec
-		countDown.Elapsed += LightSwitcher;
-		countDown.AutoReset = true;
-		countDown.Enabled = true;
-
+		Count += Time.deltaTime;
+		Debug.Log(Count);
+		if (!(Count > 5.0)) return;
+		Count = 0;
+		LightSwitcher();
 	}
 
-	private static void LightSwitcher(object source,ElapsedEventArgs e)
+	private void LightSwitcher()
 	{
-		if(lightOne.IsGreen() && lightThree.IsGreen())
-		{
-			// Green to Red
-			lightOne.SetState(3);
-			lightThree.SetState(3);			
+		Flip = !Flip;
 
-			// Red to Green
-			lightTwo.SetState(1);
-			lightTwo.SetState(1);
-		}
-		else if (lightOne.isRed() && lightThree.isRed())
-		{
-			// Green to Red
-			lightTwo.SetState(3);
-			lightTwo.SetState(3);
-			
-			// Red to Green
-			lightOne.SetState(1);
-			lightThree.SetState(1);			
-		}
-	}
-	
-	void Update () {
-		
+		// Green to Red
+		LightOne.SetState(Convert.ToInt32(!Flip));
+		LightTwo.SetState(Convert.ToInt32(Flip));			
+
+		// Red to Green
+		LightThree.SetState(Convert.ToInt32(Flip));
+		LightFour.SetState(Convert.ToInt32(!Flip));
 	}
 }

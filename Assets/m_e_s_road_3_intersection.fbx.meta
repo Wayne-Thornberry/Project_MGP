@@ -1,33 +1,36 @@
 fileFormatVersion: 2
-guid: 6a1bfb397e0cf0a4fba2039ecd02419b
+guid: f662f7111ff167540bf808c305e8edfb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Cube
+    100000: Cube.000
     100002: Cube.001
     100004: Cube.002
-    100006: //RootNode
-    400000: Cube
+    100006: Cube.004
+    100008: //RootNode
+    400000: Cube.000
     400002: Cube.001
     400004: Cube.002
-    400006: //RootNode
+    400006: Cube.004
+    400008: //RootNode
     2100000: Path
     2100002: Curb
     2100004: Road
     2100006: Yellow Lines
     2100008: Road Lines
-    2300000: Cube
+    2300000: Cube.000
     2300002: Cube.001
     2300004: Cube.002
-    3300000: Cube
+    2300006: Cube.004
+    3300000: Cube.000
     3300002: Cube.001
     3300004: Cube.002
+    3300006: Cube.004
     4300000: Cube.001
-    4300002: Cube
-    4300004: Cube.002
-    6400000: Cube
-    6400002: Cube.001
-    6400004: Cube.002
+    4300002: Cube.002
+    4300004: Cube.004
+    4300006: Cube.000
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -61,7 +64,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

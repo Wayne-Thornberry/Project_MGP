@@ -14,25 +14,36 @@ public class Agent : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		RaycastHit hit;
-		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 20, 3))
+		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 10, 3))
 		{
-			Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20, Color.yellow);
-			Speed--;
-			if (Speed <= 0)
+			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 20, 3))
 			{
-				Speed = 0;
+				Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20, Color.yellow);
+				if (hit.distance < 10 && hit.distance > 5 )
+				{
+					Speed -= 1;
+				}
+				else if (hit.distance < 5)
+				{
+					Speed -= 2;
+				}
+
+				if (Speed <= 0)
+				{
+					Speed = 0;
+				}
 			}
-		}
-		else
-		{
-			Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20, Color.white);
-			Speed++;
-			if (Speed > MaxSpeed)
+			else
 			{
-				Speed = MaxSpeed;
+				Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20, Color.white);
+				Speed++;
+				if (Speed > MaxSpeed)
+				{
+					Speed = MaxSpeed;
+				}
 			}
+			gameObject.transform.position = gameObject.transform.position + gameObject.transform.forward * (Time.deltaTime * Speed);
 		}
-		gameObject.transform.position = gameObject.transform.position + gameObject.transform.forward * (Time.deltaTime * Speed);
 	}
 
 	void OnDrawGizmos()
@@ -42,6 +53,8 @@ public class Agent : MonoBehaviour {
 		color = Color.green;
 		// local up
 		DrawHelperAtCenter(this.transform.up, color, 2f);
+		
+		DrawHelperAtCenter(this.transform.up * -1, color, 10f);
          
 		color.g -= 0.5f;
 		// global up

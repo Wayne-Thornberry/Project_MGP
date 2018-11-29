@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7fc498b548828804e8749601cc5a0c2d
+guid: f662f7111ff167540bf808c305e8edfb
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -17,6 +17,7 @@ ModelImporter:
     2100002: Curb
     2100004: Road
     2100006: Yellow Lines
+    2100008: Road Lines
     2300000: Cube.000
     2300002: Cube.001
     2300004: Cube.002
@@ -29,10 +30,6 @@ ModelImporter:
     4300002: Cube.002
     4300004: Cube.004
     4300006: Cube.000
-    6400000: Cube.000
-    6400002: Cube.001
-    6400004: Cube.002
-    6400006: Cube.004
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -67,7 +64,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1

@@ -25,7 +25,6 @@ public class TrafficLightControl : MonoBehaviour
 	void Update()
 	{
 		Count += Time.deltaTime;
-		Debug.Log(Count);
 		if (!(Count > 5.0)) return;
 		Count = 0;
 		LightSwitcher();

@@ -14,6 +14,9 @@
             <e p="Agent.cs" t="Include" />
             <e p="Vehicle.cs" t="Include" />
           </e>
+          <e p="RoadNode.cs" t="Include" />
+          <e p="RoadSegment.cs" t="Include" />
+          <e p="TrafficController.cs" t="Include" />
           <e p="TrafficLight.cs" t="Include" />
           <e p="TrafficLightControl.cs" t="Include" />
           <e p="Zones" t="Include">

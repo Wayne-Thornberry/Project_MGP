@@ -5,13 +5,10 @@ using UnityEngine;
 public class Agent : MonoBehaviour {
 
 	public int MaxSpeed;
-	public int Speed;
-	// Use this for initialization
-	void Start () {
-		
-	}
+	public float Speed;
 	
-	// Update is called once per frame
+	
+	
 	void Update () {
 		RaycastHit hit;
 		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 10, 3))
@@ -21,11 +18,11 @@ public class Agent : MonoBehaviour {
 				Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20, Color.yellow);
 				if (hit.distance < 10 && hit.distance > 5 )
 				{
-					Speed -= 1;
+					Speed -= 0.1f;
 				}
 				else if (hit.distance < 5)
 				{
-					Speed -= 2;
+					Speed -= 1f;
 				}
 
 				if (Speed <= 0)
@@ -36,7 +33,7 @@ public class Agent : MonoBehaviour {
 			else
 			{
 				Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20, Color.white);
-				Speed++;
+				Speed += 0.1f;
 				if (Speed > MaxSpeed)
 				{
 					Speed = MaxSpeed;
@@ -51,31 +48,11 @@ public class Agent : MonoBehaviour {
 		
 		Color color;
 		color = Color.green;
-		// local up
-		DrawHelperAtCenter(this.transform.up, color, 2f);
-		
-		DrawHelperAtCenter(this.transform.up * -1, color, 10f);
-         
-		color.g -= 0.5f;
-		// global up
-		DrawHelperAtCenter(Vector3.up, color, 1f);
-         
+		DrawHelperAtCenter(this.transform.up, color, 5f);
 		color = Color.blue;
-		// local forward
-		DrawHelperAtCenter(this.transform.forward, color, 2f);
-         
-		color.b -= 0.5f;
-		// global forward
-		DrawHelperAtCenter(Vector3.forward, color, 1f);
-         
+		DrawHelperAtCenter(this.transform.forward, color, 5f);
 		color = Color.red;
-		// local right
-		DrawHelperAtCenter(this.transform.right, color, 2f);
-         
-		color.r -= 0.5f;
-		// global right
-		DrawHelperAtCenter(Vector3.right, color, 1f);
-		// Does the ray intersect any objects excluding the player layer
+		DrawHelperAtCenter(this.transform.right, color, 5f);
 	}
 
 	private void DrawHelperAtCenter(Vector3 direction, Color color, float scale)
@@ -83,5 +60,13 @@ public class Agent : MonoBehaviour {
 		Gizmos.color = color;
 		Vector3 destination = transform.position + direction * scale;
 		Gizmos.DrawLine(transform.position, destination);
+	}
+	
+	
+
+	public void GoTo(RoadNode node)
+	{
+		gameObject.transform.rotation = node.transform.rotation;
+		transform.LookAt(new Vector3(node.transform.position.x, transform.position.y, node.transform.position.z));
 	}
 }

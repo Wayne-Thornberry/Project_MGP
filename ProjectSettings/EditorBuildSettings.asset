@@ -4,4 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Levels/MainMap.unity
+    guid: e05c100c749a8cb43b8ceb53a29c8132
+  - enabled: 1
+    path: Assets/Levels/BasicMap.unity
+    guid: 488ab1b3849652648902dc0a410bfcb2
+  - enabled: 1
+    path: Assets/Levels/CornerMap.unity
+    guid: c40298f6e1a0c0046ad67c1e98891f81
+  - enabled: 1
+    path: Assets/Levels/LoopMap.unity
+    guid: 53e007d976adc524592e03028a0e61c1
+  - enabled: 1
+    path: Assets/Levels/RoundaboutMap.unity
+    guid: 92305f21cf6547f43b97e2097f82f786
+  m_configObjects: {}

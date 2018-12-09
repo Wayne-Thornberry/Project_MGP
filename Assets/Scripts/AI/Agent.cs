@@ -11,18 +11,14 @@ public class Agent : MonoBehaviour {
 	
 	void Update () {
 		RaycastHit hit;
-		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 10, 3))
+		if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down), out hit, 2, 3))
 		{
-			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 20, 3))
+			if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 5, 3))
 			{
 				Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20, Color.yellow);
-				if (hit.distance < 10 && hit.distance > 5 )
+				if (hit.distance < 5)
 				{
-					Speed -= 0.1f;
-				}
-				else if (hit.distance < 5)
-				{
-					Speed -= 1f;
+					Speed -= 5f;
 				}
 
 				if (Speed <= 0)

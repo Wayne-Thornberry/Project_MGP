@@ -10,20 +10,11 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
-          <e p="AI" t="Include">
-            <e p="Agent.cs" t="Include" />
-            <e p="Vehicle.cs" t="Include" />
-          </e>
-          <e p="RoadNode.cs" t="Include" />
-          <e p="RoadSegment.cs" t="Include" />
-          <e p="TrafficController.cs" t="Include" />
-          <e p="TrafficLight.cs" t="Include" />
-          <e p="TrafficLightControl.cs" t="Include" />
-          <e p="Zones" t="Include">
-            <e p="Destroy.cs" t="Include" />
-            <e p="Spawn.cs" t="Include" />
-            <e p="Teleport.cs" t="Include" />
-          </e>
+          <e p="AI.cs" t="Include" />
+          <e p="Graph.cs" t="Include" />
+          <e p="Node.cs" t="Include" />
+          <e p="Path.cs" t="Include" />
+          <e p="World.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

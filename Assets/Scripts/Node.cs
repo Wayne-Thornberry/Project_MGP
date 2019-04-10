@@ -16,7 +16,6 @@ public class Node : MonoBehaviour
 
 	public void ConnectNode(Node node)
 	{
-		Weight = (int) Vector3.Distance(this.transform.position, node.transform.position);
 		Nodes.Add(node);
 	}
 
@@ -27,6 +26,11 @@ public class Node : MonoBehaviour
 			if(connection != null)
 				Debug.DrawLine(transform.position, connection.transform.position, Color.green);
 		}
+	}
+
+	public int GetWeight(Node destination)
+	{
+		return (int) Vector3.Distance(this.transform.position, destination.transform.position);
 	}
 
 }

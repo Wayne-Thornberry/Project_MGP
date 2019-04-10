@@ -38,11 +38,10 @@ namespace DefaultNamespace
         private void Update()
         {
             time += Time.deltaTime;
-            Debug.Log(time);
-            if (time > 5)
+            if (time > 0.5f)
             {
                 time = 0;
-                Instantiate(AI);
+                var test = Instantiate(AI);
             }
         }
 

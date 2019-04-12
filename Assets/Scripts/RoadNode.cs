@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
 
-public class Node : MonoBehaviour
+public class RoadNode : MonoBehaviour
 {
-	public List<Node> Nodes;
+	public List<RoadNode> Nodes;
 	public string Name;
 	public int Weight;
+	public TrafficLight TrafficLight;
 
-	public Node()
+	public RoadNode()
 	{
-		Nodes = new List<Node>();
+		Nodes = new List<RoadNode>();
 	}
 
-	public void ConnectNode(Node node)
+	public void ConnectNode(RoadNode roadNode)
 	{
-		Nodes.Add(node);
+		Nodes.Add(roadNode);
 	}
 
 	private void OnDrawGizmos()
@@ -28,8 +29,10 @@ public class Node : MonoBehaviour
 		}
 	}
 
-	public int GetWeight(Node destination)
+	public int GetWeight(RoadNode destination)
 	{
+		if(TrafficLight != null)
+		return (int) Vector3.Distance(this.transform.position, destination.transform.position) + TrafficLight.Weight;
 		return (int) Vector3.Distance(this.transform.position, destination.transform.position);
 	}
 

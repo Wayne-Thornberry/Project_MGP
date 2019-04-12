@@ -11,9 +11,11 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="AI.cs" t="Include" />
+          <e p="Freecam.cs" t="Include" />
           <e p="Graph.cs" t="Include" />
-          <e p="Node.cs" t="Include" />
           <e p="Path.cs" t="Include" />
+          <e p="RoadNode.cs" t="Include" />
+          <e p="TrafficLight.cs" t="Include" />
           <e p="World.cs" t="Include" />
         </e>
       </e>

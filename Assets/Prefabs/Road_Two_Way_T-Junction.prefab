@@ -23,7 +23,7 @@ GameObject:
   m_Layer: 0
   m_Name: C
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -39,7 +39,7 @@ GameObject:
   m_Layer: 0
   m_Name: B
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -55,7 +55,7 @@ GameObject:
   m_Layer: 0
   m_Name: C
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -71,7 +71,7 @@ GameObject:
   m_Layer: 0
   m_Name: A
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -87,7 +87,7 @@ GameObject:
   m_Layer: 0
   m_Name: C
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -103,7 +103,7 @@ GameObject:
   m_Layer: 0
   m_Name: B
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -119,7 +119,7 @@ GameObject:
   m_Layer: 0
   m_Name: C
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -135,7 +135,7 @@ GameObject:
   m_Layer: 0
   m_Name: A
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -253,7 +253,7 @@ GameObject:
   m_Layer: 0
   m_Name: B
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -269,7 +269,7 @@ GameObject:
   m_Layer: 0
   m_Name: A
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -738,6 +738,7 @@ MonoBehaviour:
   Nodes: []
   Name: 
   Weight: 73
+  TrafficLight: {fileID: 0}
 --- !u!114 &114197182499985518
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -754,6 +755,7 @@ MonoBehaviour:
   - {fileID: 114883700479381314}
   Name: 
   Weight: 73
+  TrafficLight: {fileID: 0}
 --- !u!114 &114206547479653990
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -769,6 +771,7 @@ MonoBehaviour:
   - {fileID: 114762082772608740}
   Name: 
   Weight: 73
+  TrafficLight: {fileID: 0}
 --- !u!114 &114379340469977816
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -784,6 +787,7 @@ MonoBehaviour:
   - {fileID: 114858242373217894}
   Name: 
   Weight: 73
+  TrafficLight: {fileID: 0}
 --- !u!114 &114450913835511416
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -798,6 +802,7 @@ MonoBehaviour:
   Nodes: []
   Name: 
   Weight: 73
+  TrafficLight: {fileID: 0}
 --- !u!114 &114762082772608740
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -814,6 +819,7 @@ MonoBehaviour:
   - {fileID: 114197182499985518}
   Name: 
   Weight: 73
+  TrafficLight: {fileID: 0}
 --- !u!114 &114772476827449542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -829,6 +835,7 @@ MonoBehaviour:
   - {fileID: 114197182499985518}
   Name: 
   Weight: 73
+  TrafficLight: {fileID: 0}
 --- !u!114 &114858242373217894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -844,6 +851,7 @@ MonoBehaviour:
   - {fileID: 114949479293792762}
   Name: 
   Weight: 73
+  TrafficLight: {fileID: 0}
 --- !u!114 &114883700479381314
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -858,6 +866,7 @@ MonoBehaviour:
   Nodes: []
   Name: 
   Weight: 73
+  TrafficLight: {fileID: 0}
 --- !u!114 &114949479293792762
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -874,3 +883,4 @@ MonoBehaviour:
   - {fileID: 114762082772608740}
   Name: 
   Weight: 73
+  TrafficLight: {fileID: 0}

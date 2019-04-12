@@ -7,10 +7,11 @@ namespace DefaultNamespace
 {
     public class World : MonoBehaviour
     {
-        public static Node[] Nodes { get; set; }
+        public static RoadNode[] RoadNodes { get; set; }
         public static bool Connected { get; set; }
 
         public GameObject AI;
+        public static int Cars;
         private static float time;
 
         public World()
@@ -20,37 +21,39 @@ namespace DefaultNamespace
 
         private void Awake()
         {
-            Nodes = FindObjectsOfType<Node>();
+            RoadNodes = FindObjectsOfType<RoadNode>();
             GenerateConnections();
         }
 
         private void GenerateConnections()
         {
-            foreach (var nodeA in Nodes.Where(node=>node.name == "A").ToList())
+            foreach (var nodeA in RoadNodes.Where(node=>node.name == "A").ToList())
             {
-                foreach (var nodeB in Nodes.Where(node=>node.name == "B" && Vector3.Distance(nodeA.transform.position, node.transform.position) < 3f ).ToList())
+                nodeA.Nodes = new List<RoadNode>();
+                foreach (var nodeB in RoadNodes.Where(node=>node.name == "B" && Vector3.Distance(nodeA.transform.position, node.transform.position) < 3f ).ToList())
                 {
                     nodeA.ConnectNode(nodeB);
                 }
             }
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
-            time += Time.deltaTime;
-            if (time > 0.5f)
-            {
-                time = 0;
-                var test = Instantiate(AI);
-            }
+            //time += Time.deltaTime;
+            //if (time > 0.5f && Cars < 10)
+            //{
+            //    time = 0;
+            //    var test = Instantiate(AI);
+            //    Cars++;
+            //}
         }
 
         private void Start()
         {
             
-            for (int i = 0; i < Nodes.Length; i++)
+            for (int i = 0; i < RoadNodes.Length; i++)
             {
-                Nodes[i].name = i.ToString("X");
+                RoadNodes[i].name = i.ToString("X");
             }
         }
     }

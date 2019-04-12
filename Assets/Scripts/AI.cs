@@ -6,41 +6,41 @@ using Random = System.Random;
 
 public class AI : MonoBehaviour
 {
-    public Node Destination; // Where the AI wants to go
-
-
-    public Node Home; // Starting Place of the AI
-    public LinkedListNode<Node> NextTarget;
-
-    public LinkedList<Node>
-        Route; // The AI Route to Follow, they will go through all nodes (Linked list nodes) to reach the real nodes
+    public RoadNode Home; // Starting Place of the AI
+    public RoadNode Destination; // Where the AI wants to go
+    
+    public LinkedListNode<RoadNode> NextTarget;
+    public LinkedList<RoadNode> Route; // The AI Route to Follow, they will go through all nodes (Linked list nodes) to reach the real nodes
 
     public AI()
     {
-        Route = new LinkedList<Node>();
+        Route = new LinkedList<RoadNode>();
         Randoms = new Random();
         MaxSpeed = 10f;
         CarColor = new Color((float) Randoms.NextDouble(), (float) Randoms.NextDouble(), (float) Randoms.NextDouble());
     }
 
     public Color CarColor { get; set; }
-
     public Random Randoms { get; set; }
-
     public bool RunPath { get; set; }
-
     public float MaxSpeed { get; set; }
     public float Speed { get; set; }
+    public bool IsFocused { get; set; }
 
     private void Start()
     {
-        Home = World.Nodes[Randoms.Next(0, World.Nodes.Length)];
-        Destination = World.Nodes[Randoms.Next(0, World.Nodes.Length)];
+        if(Home == null)
+        Home = World.RoadNodes[Randoms.Next(0, World.RoadNodes.Length)];
+        
+        if(Destination == null)
+        Destination = World.RoadNodes[Randoms.Next(0, World.RoadNodes.Length)];
+        
         gameObject.transform.position = Home.transform.position;
         gameObject.transform.rotation = Home.transform.rotation;
-        GenerateRoute();
+        Route = GeneratePath(Home,Destination);
         NextTarget = Route.First;
         RunPath = true;
+        name = CarColor.ToString();
         foreach (var renderer in gameObject.GetComponentsInChildren<MeshRenderer>())
         {
             renderer.material.shader = Shader.Find("_Color");
@@ -50,12 +50,16 @@ public class AI : MonoBehaviour
         }
     }
 
+    public override string ToString()
+    {
+        return "Car " + CarColor + " Home: " + Home.name + " Destination:" + Destination.name + " " + Route;
+    }
+
     public void FixedUpdate()
     {
         if (!RunPath) return;
         if (NextTarget != null)
         {
-            //Debug.DrawLine(transform.position, NextTarget.Value.transform.position, Color.red);
             if (Vector3.Distance(transform.position, NextTarget.Value.transform.position) > 0.1f)
             {
                 RaycastHit hit;
@@ -81,8 +85,7 @@ public class AI : MonoBehaviour
                         if (Speed > MaxSpeed) Speed = MaxSpeed;
                     }
 
-                    gameObject.transform.position = gameObject.transform.position +
-                                                    gameObject.transform.forward * (Time.deltaTime * Speed);
+                    gameObject.transform.position = gameObject.transform.position + gameObject.transform.forward * (Time.deltaTime * Speed);
                 }
             }
             else
@@ -93,14 +96,14 @@ public class AI : MonoBehaviour
         else
         {
             RunPath = false;
-            Destroy(gameObject);
+            Kill();
         }
     }
 
     private void OnDrawGizmos()
     {
         Gizmos.DrawLine(transform.position, transform.position + transform.forward * 2);
-        if (Route == null || NextTarget == null) return;
+        if (Route == null || NextTarget == null || !IsFocused) return;
         var node = Route.First;
         while (node.Next != null)
         {
@@ -109,55 +112,55 @@ public class AI : MonoBehaviour
         }
     }
 
-    private void GenerateRoute()
+    private Path GeneratePath(RoadNode home, RoadNode destination)
     {
-        var pathtime = Time.realtimeSinceStartup ;
-        Route.AddFirst(Home); // starting point is the home I.E starting position
-        var nodeBlacklist = new List<Node>();
-        var iters = 0;
-        try
+        var path = new Path();
+        path.CalcTime = Time.realtimeSinceStartup;
+        path.AddFirst(home);
+        RoadNode currRoadNode;
+        RoadNode nextRoadNode;
+        while (path.Last.Value != destination && path.Tries < 600)
         {
-            while (Route.Last.Value != Destination && iters < 600) // keep calculating until you hit your destination
+            currRoadNode = path.Last.Value;
+            nextRoadNode = null;
+            
+            foreach (var node in currRoadNode.Nodes)
             {
-                var currNode = Route.Last.Value;
-                Node nextNode = null;
-                foreach (var node in currNode.Nodes)
+                if (node == null || path.Contains(node)) continue;
+                if (nextRoadNode == null)
                 {
-                    if (node == null) continue;
-                    if (Route.Contains(node) || nodeBlacklist.Contains(node)) continue;
-                    if (nextNode == null)
-                    {
-                        nextNode = node;
-                    }
-                    else
-                    {
-                        if (node.GetWeight(Destination) < nextNode.GetWeight(Destination)) nextNode = node;
-                    }
-                }
-
-                if (nextNode == null)
-                {
-                    nodeBlacklist.Add(Route.Last.Value);
-                    Route.RemoveLast();
+                    nextRoadNode = node;
                 }
                 else
                 {
-                    Route.AddLast(nextNode);
+                    if (node.GetWeight(destination) < nextRoadNode.GetWeight(destination)) nextRoadNode = node;
                 }
-
-                iters++;
             }
-        }
-        catch (Exception e)
+
+            if (nextRoadNode != null)
+            {
+                path.AddLast(nextRoadNode);
+            }
+            else
+            {
+                break;
+            }
+            path.Tries++;
+        } 
+        
+        path.CalcTime = Time.realtimeSinceStartup - path.CalcTime;
+        path.CalcTime = (float) ((path.CalcTime * 100) / 100.0);
+        if (path.Last.Value == destination)
         {
-            Debug.Log(e);
+            path.IsSuccessful = true;
         }
 
-        var path = "";
-        pathtime = Time.realtimeSinceStartup - pathtime;
-        pathtime = (float) ((pathtime * 100) / 100.0);
-        foreach (var node in Route) path = path + " => " + "[" + node.GetWeight(Destination) + "]" + node.name;
-        Debug.Log("Car " + CarColor + " Home: " + " Path Time: " + pathtime + " " + Home.name + " Destination:" + Destination.name + " Tries: " + iters +
-                  " " + path);
+        return path;
+    }
+
+    public void Kill()
+    {
+        World.Cars--;
+        Destroy(gameObject);
     }
 }

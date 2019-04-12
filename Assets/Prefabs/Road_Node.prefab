@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4889174966913710}
   - component: {fileID: 114830769584225090}
   m_Layer: 0
-  m_Name: Node
+  m_Name: Road_Node
   m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -54,3 +54,4 @@ MonoBehaviour:
   Nodes: []
   Name: 
   Weight: 73
+  TrafficLight: {fileID: 0}

@@ -30,10 +30,10 @@ public class AI : MonoBehaviour
     private void Start()
     {
         if(Home == null)
-        Home = World.RoadNodes[Randoms.Next(0, World.RoadNodes.Length)];
+        Home = ConnectionsController.RoadNodes[Randoms.Next(0, ConnectionsController.RoadNodes.Length)];
         
         if(Destination == null)
-        Destination = World.RoadNodes[Randoms.Next(0, World.RoadNodes.Length)];
+        Destination = ConnectionsController.RoadNodes[Randoms.Next(0, ConnectionsController.RoadNodes.Length)];
         
         gameObject.transform.position = Home.transform.position;
         gameObject.transform.rotation = Home.transform.rotation;
@@ -160,7 +160,7 @@ public class AI : MonoBehaviour
 
     public void Kill()
     {
-        World.Cars--;
+        SpawnController.Cars--;
         Destroy(gameObject);
     }
 }

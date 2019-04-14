@@ -286,7 +286,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1642069716912264}
   m_LocalRotation: {x: -0, y: 0.70710653, z: -0, w: 0.70710707}
-  m_LocalPosition: {x: -21, y: 0, z: -48}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4978382333523308}
@@ -708,6 +708,10 @@ MonoBehaviour:
   - {fileID: 114298331672363480}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114275004691496824
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -723,6 +727,10 @@ MonoBehaviour:
   - {fileID: 114298331672363480}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114298331672363480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -738,6 +746,10 @@ MonoBehaviour:
   - {fileID: 114226105363643298}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114654017432363806
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -752,6 +764,10 @@ MonoBehaviour:
   Nodes: []
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114799581832267084
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -767,6 +783,10 @@ MonoBehaviour:
   - {fileID: 114654017432363806}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114907295536756826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -782,3 +802,7 @@ MonoBehaviour:
   - {fileID: 114799581832267084}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0

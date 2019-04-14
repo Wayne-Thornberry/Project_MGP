@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using DefaultNamespace;
+using UnityEditor;
 using UnityEngine;
 using Random = System.Random;
 
@@ -16,24 +18,22 @@ public class AI : MonoBehaviour
     {
         Route = new LinkedList<RoadNode>();
         Randoms = new Random();
-        MaxSpeed = 10f;
         CarColor = new Color((float) Randoms.NextDouble(), (float) Randoms.NextDouble(), (float) Randoms.NextDouble());
     }
 
     public Color CarColor { get; set; }
     public Random Randoms { get; set; }
     public bool RunPath { get; set; }
-    public float MaxSpeed { get; set; }
     public float Speed { get; set; }
     public bool IsFocused { get; set; }
 
     private void Start()
     {
         if(Home == null)
-        Home = ConnectionsController.RoadNodes[Randoms.Next(0, ConnectionsController.RoadNodes.Length)];
+        Home = SpawnController.SpawnPoints[Randoms.Next(0, SpawnController.SpawnPoints.Length)];
         
         if(Destination == null)
-        Destination = ConnectionsController.RoadNodes[Randoms.Next(0, ConnectionsController.RoadNodes.Length)];
+        Destination = SpawnController.DestinationPoints[Randoms.Next(0, SpawnController.SpawnPoints.Length)];
         
         gameObject.transform.position = Home.transform.position;
         gameObject.transform.rotation = Home.transform.rotation;
@@ -52,7 +52,7 @@ public class AI : MonoBehaviour
 
     public override string ToString()
     {
-        return "Car " + CarColor + " Home: " + Home.name + " Destination:" + Destination.name + " " + Route;
+        return "Car " + CarColor + " Home: " + Home.name + " Destination:" + Destination.name + " Next Node Speed: " + NextTarget.Value.Speedlimit +  " " + Route;
     }
 
     public void FixedUpdate()
@@ -60,7 +60,7 @@ public class AI : MonoBehaviour
         if (!RunPath) return;
         if (NextTarget != null)
         {
-            if (Vector3.Distance(transform.position, NextTarget.Value.transform.position) > 0.1f)
+            if (Vector3.Distance(transform.position, NextTarget.Value.transform.position) > 0.5f)
             {
                 RaycastHit hit;
                 transform.LookAt(NextTarget.Value.transform.position);
@@ -73,7 +73,7 @@ public class AI : MonoBehaviour
                             Color.yellow);
                         if (hit.distance < 10 && hit.distance > 5)
                             Speed -= 0.1f;
-                        else if (hit.distance < 5) Speed -= 1f;
+                        else if (hit.distance < 5) Speed -= 2f;
 
                         if (Speed <= 0) Speed = 0;
                     }
@@ -81,8 +81,8 @@ public class AI : MonoBehaviour
                     {
                         Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * 20,
                             Color.white);
-                        Speed += 0.1f;
-                        if (Speed > MaxSpeed) Speed = MaxSpeed;
+                        Speed += 0.2f;
+                        if (Speed > NextTarget.Value.Speedlimit) Speed = NextTarget.Value.Speedlimit;
                     }
 
                     gameObject.transform.position = gameObject.transform.position + gameObject.transform.forward * (Time.deltaTime * Speed);
@@ -102,12 +102,15 @@ public class AI : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = CarColor;
         Gizmos.DrawLine(transform.position, transform.position + transform.forward * 2);
+        Gizmos.DrawCube(Destination.transform.position, new Vector3(1,1,1));
         if (Route == null || NextTarget == null || !IsFocused) return;
         var node = Route.First;
         while (node.Next != null)
         {
             Debug.DrawLine(node.Value.transform.position, node.Next.Value.transform.position, CarColor);
+            Handles.Label(node.Value.transform.position, node.Value.name);
             node = node.Next;
         }
     }

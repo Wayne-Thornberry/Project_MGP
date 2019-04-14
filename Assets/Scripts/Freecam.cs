@@ -22,13 +22,9 @@ public class Freecam : MonoBehaviour
         if(Input.GetKey(KeyCode.S)){
             gameObject.transform.position = gameObject.transform.position - gameObject.transform.up * (Time.deltaTime * 100f);
         }
-		
-        if(Input.GetAxis("Mouse ScrollWheel") > 0f){
-            gameObject.transform.position = gameObject.transform.position + gameObject.transform.forward * ((Time.deltaTime * 100f) + Input.GetAxis("Mouse ScrollWheel") * 10f);
-        }
-		
-        if(Input.GetAxis("Mouse ScrollWheel") < 0f){
-            gameObject.transform.position = gameObject.transform.position - gameObject.transform.forward * ((Time.deltaTime * 100f) + Input.GetAxis("Mouse ScrollWheel") * 10f);
+        
+        if (Math.Abs(Input.GetAxis("Mouse ScrollWheel")) > 0f) {
+            gameObject.transform.position = gameObject.transform.position + gameObject.transform.forward * ((Input.GetAxis("Mouse ScrollWheel") * 10f) * CamSensitivity);
         }
 		
         if(Input.GetKey(KeyCode.D)){
@@ -39,7 +35,7 @@ public class Freecam : MonoBehaviour
             gameObject.transform.position = gameObject.transform.position - gameObject.transform.right * (Time.deltaTime * 100f);
         }
 
-        if ( Input.GetMouseButtonDown (1)){ 
+        if (Input.GetMouseButtonDown (1)){ 
             RaycastHit hit; 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition); 
             if ( Physics.Raycast (ray,out hit,10000f)) {
@@ -79,4 +75,6 @@ public class Freecam : MonoBehaviour
 
         
     }
+
+    public float CamSensitivity;
 }

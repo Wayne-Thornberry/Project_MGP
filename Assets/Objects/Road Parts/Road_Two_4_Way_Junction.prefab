@@ -890,6 +890,10 @@ MonoBehaviour:
   - {fileID: 114395801462044866}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114393163327142380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -904,6 +908,10 @@ MonoBehaviour:
   Nodes: []
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114395801462044866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -921,6 +929,10 @@ MonoBehaviour:
   - {fileID: 114766251048587834}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114410775144541214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -938,6 +950,10 @@ MonoBehaviour:
   - {fileID: 114411351166861772}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114411351166861772
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -955,6 +971,10 @@ MonoBehaviour:
   - {fileID: 114395801462044866}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114524666033800112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -970,6 +990,10 @@ MonoBehaviour:
   - {fileID: 114766251048587834}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114551155137275894
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -984,6 +1008,10 @@ MonoBehaviour:
   Nodes: []
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114554345208491194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -998,6 +1026,10 @@ MonoBehaviour:
   Nodes: []
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114766251048587834
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1015,6 +1047,10 @@ MonoBehaviour:
   - {fileID: 114410775144541214}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114831948813418688
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1030,6 +1066,10 @@ MonoBehaviour:
   - {fileID: 114410775144541214}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114879765366331526
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1044,6 +1084,10 @@ MonoBehaviour:
   Nodes: []
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0
 --- !u!114 &114951376424339224
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1059,3 +1103,7 @@ MonoBehaviour:
   - {fileID: 114411351166861772}
   Name: 
   Weight: 73
+  IsSpawpoint: 0
+  IsDestination: 0
+  Speedlimit: 30
+  IsTrafficLight: 0

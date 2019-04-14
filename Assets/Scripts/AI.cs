@@ -60,7 +60,7 @@ public class AI : MonoBehaviour
         if (!RunPath) return;
         if (NextTarget != null)
         {
-            if (Vector3.Distance(transform.position, NextTarget.Value.transform.position) > 0.5f)
+            if (Vector3.Distance(transform.position, NextTarget.Value.transform.position) > 2f)
             {
                 RaycastHit hit;
                 transform.LookAt(NextTarget.Value.transform.position);

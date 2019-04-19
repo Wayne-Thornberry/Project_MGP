@@ -7,10 +7,10 @@ using UnityEngine;
 public class RoadNode : MonoBehaviour
 {
 	public List<RoadNode> Nodes;
-	public string Name;
-	public int Weight;
 	public bool IsSpawpoint;
+	public int Weight;
 	public bool IsDestination;
+	public bool Blocked;
 	public int Speedlimit;
 	public bool IsTrafficLight;
 
@@ -39,7 +39,7 @@ public class RoadNode : MonoBehaviour
 		
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawCube(transform.position, new Vector3(1,1,1));
-		Handles.Label(transform.position, this.name);
+		//Handles.Label(transform.position, this.name);
 	}
 
 	private void Start()
@@ -61,21 +61,19 @@ public class RoadNode : MonoBehaviour
 	private void CreateTrafficLight()
 	{
 		var tl = Instantiate(FindObjectOfType<ObjectController>().TrafficLight);
-		tl.transform.position = this.gameObject.transform.position;
-		tl.transform.Rotate(Vector3.up, 270f);
+		tl.transform.position = this.gameObject.transform.position + new Vector3(0,-1f,0);
+		tl.transform.localEulerAngles = this.transform.localEulerAngles + new Vector3(0,-180,0);
 		_trafficLight = tl.GetComponentInParent<TrafficLight>();
 		_trafficLight.OnLightChanged += () =>
 		{
 			Speedlimit = _trafficLight.Speed;
-			Debug.Log(Speedlimit);
 		};
+		Weight += _trafficLight.Weight;
 	}
 
-	public int GetWeight(RoadNode destination)
+	public int GetWeightBasedOnDestination(RoadNode destination)
 	{
-		if(_trafficLight != null)
-		return (int) Vector3.Distance(this.transform.position, destination.transform.position) + _trafficLight.Weight;
-		return (int) Vector3.Distance(this.transform.position, destination.transform.position);
+		return (int) Vector3.Distance(this.transform.position, destination.transform.position) + Weight;
 	}
 
 }

@@ -36,9 +36,15 @@ namespace New
         
         public override string ToString()
         {
+            return " PathInfo{ [" + Weight + "]Successful: " + IsSuccessful + " Tries: " + this.Tries +
+                   " Calculation Time: " + this.CalcTime + " ";
+        }
+
+        public string GetPathToString()
+        {
             var path = "";
             foreach (var node in this) path = path + " => " + "[" + node.Value.Weight + "]" + " "+ "[" + node.Weight + "]" + node.Name;
-            return " PathInfo{ ["+Weight+"]Successful: " + IsSuccessful + " Tries: " + this.Tries + " Calculation Time: " + this.CalcTime +  " " + path + "}";
+            return "{"  + path + "}";
         }
     }
 }

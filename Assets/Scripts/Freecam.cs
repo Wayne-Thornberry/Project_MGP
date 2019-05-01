@@ -64,8 +64,16 @@ public class Freecam : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("TitleScene");
+            SpawnController.Cars = 0;
+            SpawnController.Log = "";
         }
 
+        
+        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        {
+            SceneManager.LoadScene("EndScene");
+        }
+        
         if (Input.GetMouseButtonDown(1))
             {
                 RaycastHit hit;

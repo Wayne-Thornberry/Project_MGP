@@ -23,6 +23,7 @@
           <e p="RouteNode.cs" t="Include" />
           <e p="TrafficLight.cs" t="Include" />
           <e p="UI" t="Include">
+            <e p="EndScreen.cs" t="Include" />
             <e p="HUD.cs" t="Include" />
             <e p="MainMenu.cs" t="Include" />
           </e>

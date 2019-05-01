@@ -10,7 +10,7 @@ public class RoadNode : MonoBehaviour
 	public bool IsSpawpoint;
 	public int Weight;
 	public bool IsDestination;
-	public bool Blocked;
+	public bool IsBlocked;
 	public int Speedlimit;
 	public bool IsTrafficLight;
 

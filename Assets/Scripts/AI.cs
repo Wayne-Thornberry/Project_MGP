@@ -40,7 +40,7 @@ public class AI : MonoBehaviour
         if(Home == null)
         Home = SpawnController.SpawnPoints[Randoms.Next(0, SpawnController.SpawnPoints.Length)];
 
-        if (Home.Blocked)
+        if (Home.IsBlocked)
             Kill();
         
         if(Destination == null)
@@ -61,12 +61,14 @@ public class AI : MonoBehaviour
             r.material.shader = Shader.Find("Specular");
             r.material.SetColor("_SpecColor", VehicleColor);
         }
+
+        SpawnController.Log += this + "\n";
     }
 
 
     public override string ToString()
     {
-        return "Car " + VehicleColor + " Home: " + Home.name + " Destination:" + Destination.name + " Next Node Speed: " + NextDestination.Value.Speedlimit +  " " + SelectedRoute;
+        return "Car " + VehicleColor + " Home: " + Home.name + " Destination:" + Destination.name + " Next Node Speed: " + NextDestination.Value.Speedlimit +  " \n" + SelectedRoute;
     }
     
     public void FixedUpdate()
@@ -122,10 +124,12 @@ public class AI : MonoBehaviour
             else
             {
                 RouteProgress++;
-                NextDestination.Value.Blocked = false;
+                NextDestination.Value.IsBlocked = false;
+                NextDestination.Value.Weight -= 20;
                 NextDestination = SelectedRoute.ElementAtOrDefault(RouteProgress);
-                if(NextDestination != null)
-                NextDestination.Value.Blocked = true;
+                if (NextDestination == null) return;
+                NextDestination.Value.IsBlocked = true;
+                NextDestination.Value.Weight += 20;
             }
         }
         else
@@ -149,7 +153,7 @@ public class AI : MonoBehaviour
                 var node = SelectedRoute[i];
                 var next = SelectedRoute[i+1];
                 Debug.DrawLine(node.Value.transform.position, next.Value.transform.position, VehicleColor);
-                //Handles.Label(node.Value.transform.position, node.Value.name);
+                Handles.Label(node.Value.transform.position, node.Value.name);
             }
             catch (Exception e)
             {

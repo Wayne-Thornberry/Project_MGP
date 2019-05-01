@@ -12,6 +12,7 @@ namespace DefaultNamespace
         public static RoadNode[] SpawnPoints { get; set; }
         public static RoadNode[] DestinationPoints { get; set; }
         public static bool DisableSpawning { get; set; }
+        public static string Log { get; set; }
 
         public int CarLimit;
         private float Time;
